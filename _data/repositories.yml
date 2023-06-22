@@ -1,12 +1,15 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - majauhar
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - majauhar/the_classroom_project
+  - majauhar/Smart-Calculator
+  - OpenMined/syft-enclave
+  - majauhar/Gitbook-CS-Maths
+  # - alshedivat/al-folio
+  # - twbs/bootstrap
+  # - jekyll/jekyll
+  # - jquery/jquery
+  # - FortAwesome/Font-Awesome
+  # - jpswalsh/academicons
+  # - mathjax/MathJax
