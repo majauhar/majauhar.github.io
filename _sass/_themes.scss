@@ -3,14 +3,14 @@
  ******************************************************************************/
 
 :root {
-  --global-bg-color: #{$eggshell-white};
+  --global-bg-color: #{$white-color};
   --global-code-bg-color: #{$code-bg-color-light};
-  --global-text-color: #{$grey-color};
+  --global-text-color: #{$black-color};
   --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$jellybean-dark};
-  --global-hover-color: #{$jellybean-light};
+  --global-theme-color: #{$mysterious-blue-light};
+  --global-hover-color: #{$mysterious-blue-light};
   --global-hover-text-color: #{$white-color};
-  --global-footer-bg-color: #{$Charcoal-Black};
+  --global-footer-bg-color: #{$grey-color-dark};
   --global-footer-text-color: #{$grey-color-light};
   --global-footer-link-color: #{$white-color};
   --global-distill-app-color: #{$grey-color};
