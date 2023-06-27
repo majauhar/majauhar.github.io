@@ -6,14 +6,14 @@
  * Themes
  ******************************************************************************/
 :root {
-  --global-bg-color: #ffffff;
+  --global-bg-color: #eae7dc;
   --global-code-bg-color: rgba(181, 9, 172, 0.05);
-  --global-text-color: #000000;
+  --global-text-color: #828282;
   --global-text-color-light: #828282;
-  --global-theme-color: #00369f;
-  --global-hover-color: #00369f;
+  --global-theme-color: #e85a4f;
+  --global-hover-color: #e98074;
   --global-hover-text-color: #ffffff;
-  --global-footer-bg-color: #1C1C1D;
+  --global-footer-bg-color: #040404;
   --global-footer-text-color: #e8e8e8;
   --global-footer-link-color: #ffffff;
   --global-distill-app-color: #828282;
@@ -48,12 +48,12 @@
 }
 
 html[data-theme=dark] {
-  --global-bg-color: #1C1C1D;
+  --global-bg-color: #262626;
   --global-code-bg-color: #2c3237;
   --global-text-color: #e8e8e8;
   --global-text-color-light: #e8e8e8;
-  --global-theme-color: #2698BA;
-  --global-hover-color: #2698BA;
+  --global-theme-color: #acb7ae;
+  --global-hover-color: #acb7ae;
   --global-hover-text-color: #ffffff;
   --global-footer-bg-color: #e8e8e8;
   --global-footer-text-color: #1C1C1D;
@@ -225,7 +225,7 @@ blockquote {
 .profile .address {
   margin-bottom: 5px;
   margin-top: 5px;
-  font-family: cursive;
+  font-family: monospace;
 }
 .profile .address p {
   display: inline-block;
