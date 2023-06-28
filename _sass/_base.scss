@@ -19,6 +19,9 @@ strong {
   color: var(--global-text-color);
 }
 
+body {
+  font-family:'Lora', serif;
+}
 hr {
   border-top: 1px solid var(--global-divider-color);
 }
@@ -331,6 +334,7 @@ blockquote {
 footer.fixed-bottom {
   background-color: var(--global-footer-bg-color);
   font-size: 0.75rem;
+  text-align: center;
 
   .container {
     color: var(--global-footer-text-color);
