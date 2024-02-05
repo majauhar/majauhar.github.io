@@ -6,7 +6,7 @@ subtitle: Computer Engineer & AI Researcher #<a href='#'></a>
 
 profile:
   align: right
-  image: pxArt2.png
+  image: pxArt1.png
   image_circular: false # crops the image to make it circular
   address: 
 
@@ -19,9 +19,9 @@ social: true  # includes social icons at the bottom of the page
 
 ## About Me
 
-I am a Computer Engineering graduate and an incoming masters student at ENS Paris-Saclay, France, joining the <a href="https://www.master-mva.com/"> Mathematics, Vision, AI (MVA) </a> program. I am intersted in deciphering the blackbox that deep learning models are and contribute to our understanding of the fundamentals of AI applications in vision and language. I have previously worked on adversarial training of re-identification models and large language models.
+I am a Computer Engineer and a master candidate in Applied Mathematics at ENS Paris-Saclay, France, taking the <a href="https://www.master-mva.com/"> Mathématiques, Vision, Apprentissage (MVA) </a> program. I am interested in deciphering the blackbox that deep learning models are and increase our understanding of the fundamentals of machine learning and its applications in vision and language. I have previously worked on adversarial training of re-identification models and large language models.
 
-I also have a strong interest in emerging technology like AI and its impact on the society. I have previously participated in Internet governance discourse at both national and international levels including the UN Internet Governance Forum, ICANN meetings, IETF conferences. Currently, I am leading the Internet Society Youth Standing Group as <a href="https://youthsig.org/"> Secretary</a>, elected for the 2022-24 term.
+I also have a significant interest in emerging technology like AI and its impact on the society. I have previously participated in Internet governance discourse at both national and international levels including the UN Internet Governance Forum, ICANN meetings, IETF meetings. Currently, I previously served as the <a href="https://youthsig.org/"> Secretary</a> of the Internet Society Youth Standing Group, during the 2022-24 term.
 
 
 
