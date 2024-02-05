@@ -6,7 +6,7 @@ subtitle: Computer Engineer & AI Researcher #<a href='#'></a>
 
 profile:
   align: right
-  image: pixArt.png
+  image: pxArt.png
   image_circular: false # crops the image to make it circular
   address: 
 
