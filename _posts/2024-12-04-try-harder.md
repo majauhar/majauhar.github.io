@@ -9,6 +9,10 @@ Content warning: on depression.
 
 ---
 
+$$
+a \equiv b \ (mod\ n)
+$$
+
 No, I really can’t.
 
 In the last few years I have learned that the way to keep myself away from suicidal ideation is through resource management.
