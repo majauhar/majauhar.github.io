@@ -37,19 +37,19 @@ root: true
 </nav>
 
 <div class="lang">
-  <a href="/zh-TW/" srclang="zh-TW">正體中文</a><a href="/" srclang="en-US" aria-current="true">English</a><a href="/de-DE/" srclang="de-DE">Deutsch</a>
+  <a href="/" srclang="en-US" aria-current="true">English</a>
 </div>
 
-<hr class="hr">
+<!-- <hr class="hr"> -->
 
-<h2 class="normal-heading">Stories</h2> <a href="/stories.xml" class="styled-link">RSS</a> <a href="https://github.com/dddddddddzzzz/OpenStories" class="styled-link">What are these?</a>
+<!-- <h2 class="normal-heading">Stories</h2> <a href="/stories.xml" class="styled-link">RSS</a> <a href="https://github.com/dddddddddzzzz/OpenStories" class="styled-link">What are these?</a> -->
 
-{% include stories.html lang="en" %}
+<!-- {% include stories.html lang="en" %} -->
 
-<hr class="hr">
+<!-- <hr class="hr"> -->
 
-<h2 class="normal-heading">Photos</h2><a href="/photos" class="styled-link">All photos</a> <a href="/photos.xml" class="styled-link">RSS</a>
-<div class="photos">
+<!-- <h2 class="normal-heading">Photos</h2><a href="/photos" class="styled-link">All photos</a> <a href="/photos.xml" class="styled-link">RSS</a> -->
+<!-- <div class="photos">
 {% assign photos = site.data.photos | reverse | slice: 0, 10 %}
 {% for photo in photos %}
   {% capture image_url %}{% for url in photo.variants %}{% if url contains "/thumbnail" %}{{ url }}{% endif %}{% endfor %}{% endcapture %}
@@ -57,9 +57,9 @@ root: true
     <img src="{{ image_url }}" height="200" alt="{{ photo.meta.alt }}" loading="lazy" style="aspect-ratio: {{ photo.meta.ratio }};">
   </a>
 {% endfor %}
-</div>
+</div> -->
 
-<h2 class="normal-heading">Film photos</h2><a href="/film" class="styled-link">All film photos</a> <a href="/film.xml" class="styled-link">RSS</a>
+<!-- <h2 class="normal-heading">Film photos</h2><a href="/film" class="styled-link">All film photos</a> <a href="/film.xml" class="styled-link">RSS</a>
 <div class="photos">
 {% assign photos = site.data.film | reverse | slice: 0, 10 %}
 {% for photo in photos %}
@@ -68,9 +68,9 @@ root: true
     <img src="{{ image_url }}" height="200" alt="{{ photo.meta.alt }}" loading="lazy" style="aspect-ratio: {{ photo.meta.ratio }};">
   </a>
 {% endfor %}
-</div>
+</div> -->
 
-<hr class="hr">
+<!-- <hr class="hr">
 
 {% assign note = site.notes | last %}
 <h2 class="normal-heading">Notes</h2><a href="/notes" class="styled-link">Recent notes</a> <a href="/notes.xml" class="styled-link">RSS</a>
@@ -80,11 +80,11 @@ root: true
   </time>
   <div class="note-content" lang="{{ note.lang }}">{{ note.content | markdownify }}</div>
   <div class="note-tags">{% for tag in note.tags %}<span class="note-tag" data-tag="{{ tag }}">{{ tag }}</span>{% endfor %}</div>
-</div>
+</div> -->
 
 <hr class="hr">
 
-<h2 class="normal-heading">Recent posts</h2><a href="/feed.xml" class="styled-link">RSS</a>
+<h2 class="normal-heading">Recent posts</h2>
 <ul aria-label="posts" class="terminal">
 {% assign posts = site.posts | where: "feature", 1 %}
 {% for post in posts %}
