@@ -1,6 +1,6 @@
-# muan.co 
+# Personal Blog
 
-Code for https://muan.co/.
+Code for majauhar.github.io
 
 ## Technology
 
@@ -20,14 +20,14 @@ $ ./start
 
 ## License
 
-The following directories and their contents are Copyright Mu-An Chiou. You may not reuse anything therein without my permission:
+The following directories and their contents are Copyright Mohammad A. Jauhar. You may not reuse anything therein without my permission:
 
 ```
 _data/
 _posts/
-_stories/
-_notes/
 images/
 ```
 
 All other directories and files are MIT Licensed (where applicable).
+
+## This website builds on the template of muan.co
