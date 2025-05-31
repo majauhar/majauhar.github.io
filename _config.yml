@@ -58,13 +58,9 @@ markdown: CommonMarkGhPages
 commonmark:
   options: ["UNSAFE", "HARDBREAKS"]
   extensions: ["strikethrough", "autolink", "table"]
-<<<<<<< Updated upstream
-recent_date: "2025/05/04"
-=======
 recent_date: "2025/02/20"
 
 # Additional support for MathJax
 enable_math: true
 mathjax:
   version: "3.2.0"
->>>>>>> Stashed changes
