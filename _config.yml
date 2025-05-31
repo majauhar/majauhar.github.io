@@ -1,6 +1,6 @@
 title:            Mohammad A. Jauhar
 description:      Notepad
-url:              https://muan.co
+url:              https://majauhar.github.io/
 permalink:        /posts/:title
 timezone:         Asia/Kolkata
 sass:
@@ -22,7 +22,7 @@ markdown: CommonMarkGhPages
 commonmark:
   options: ["UNSAFE", "HARDBREAKS"]
   extensions: ["strikethrough", "autolink", "table"]
-recent_date: "2025/02/20"
+recent_date: "2025/05/31"
 
 # Additional support for MathJax
 enable_math: true
