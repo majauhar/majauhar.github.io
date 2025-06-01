@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Multi-Agent Systems for Legal Document Automation using CAMEL AI Framework
-date: 2025-06-01 18:29:50
+date: 2025-05-31 18:29:50
 feature: 1
 ---
 
@@ -42,11 +42,11 @@ It will have:
 
 ### CAMEL: Communicative Agents for Mind Exploration of Large Scale Language Model Society
 
-We have our multi-agent system design now. But how do we implement it? We will be using `Camel-AI`’s `Workforce` module. What is Camel? **Camel** stands for “*Communicative Agents for Mind Exploration of Large Scale Language Model Society*”. 
+We have our multi-agent system design now. But how do we implement it? We will be using `Camel-AI`’s `Workforce` module. What is CAMEL AI? **CAMEL** stands for “*Communicative Agents for Mind Exploration of Large Scale Language Model Society*”. 
 
 Now that’s a lot of words. In short, it is an open source multi-agent framework that provides a large suite of agentic AI modules such as RAG, synthetic data generation, MCP and tens of other toolkits, amongst other things.
 
-Now, a brief overview of how Camel works. An agent in Camel, with an AI model (usually a LLM) as the brain, takes a specified role, is provided access to any number of tools (user-defined, MCP, you name it). For our specific task, we first create our three agents as with roles as specified previously. We then create a team of these three agents and assign the team our task. In the end, we hope that they would interact with each other well to solve the task well.
+Now, a brief overview of how CAMEL works. An agent in CAMEL, with an AI model (usually a LLM) as the brain, takes a specified role, is provided access to any number of tools (user-defined, MCP, you name it). For our specific task, we first create our three agents as with roles as specified previously. We then create a team of these three agents and assign the team our task. In the end, we hope that they would interact with each other well to solve the task well.
 
 Let’s get started. Firstly, we would set up our development environment.
 
