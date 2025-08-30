@@ -16,7 +16,7 @@ collections:
 i18n:
   en-US:
     accessibility: Accessibility statement
-    source: Website Source Template
+    source: Website Template Source
 include: [".well-known"]
 markdown: CommonMarkGhPages
 commonmark:
