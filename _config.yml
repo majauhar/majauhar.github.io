@@ -22,7 +22,7 @@ markdown: CommonMarkGhPages
 commonmark:
   options: ["UNSAFE", "HARDBREAKS"]
   extensions: ["strikethrough", "autolink", "table"]
-recent_date: "2025/05/31"
+recent_date: "2025/08/30"
 
 # Additional support for MathJax
 enable_math: true
