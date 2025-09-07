@@ -6,6 +6,7 @@ feature: 1
 ---
 
 > ***The sum of the parts is both more than, and different from, the parts themselves.***
+> 
 
 In his famous essay *More Is Different* (1972), physicist *Philip W. Anderson* argued that complexity and scale give rise to entirely new properties that cannot be extrapolated from the behavior of individual components [Anderson, 1972]. This perspective is reflected across disciplines. Is chemistry just applied physics? Is molecular biology merely applied single-cell biology? Is computer science or machine learning simply applied mathematics? Clearly, they are not. While many fields build upon one another, Anderson emphasized that at each new stage, new laws, concepts, and generalizations become necessary.
 
