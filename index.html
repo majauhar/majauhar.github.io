@@ -20,7 +20,7 @@ root: true
   <a href="https://www.linkedin.com/in/majauhar/" rel="me" target="_blank">LinkedIn</a><hr class="inline-hr">
   <a href="https://github.com/majauhar" rel="me" target="_blank">GitHub</a><hr class="inline-hr">
   <a href="https://drive.google.com/file/d/1celygb9FR9KOxB9wdmg9h5J44mh6SRP7/view?usp=sharing" rel="me" target="_blank">CV</a><hr class="inline-hr">
-  <a href="https://scholar.google.com/citations?user=zQL4bMUAAAAJ&hl=en" rel="me" target="_blank">Scholar</a>
+  <a href="https://scholar.google.com/citations?user=zQL4bMUAAAAJ&hl=en" rel="me" target="_blank">Scholar</a><hr class="inline-hr">
   <a href="https://huggingface.co/Jauhar" rel="me", target="_blank">HF</a>
 </nav>
 
@@ -36,7 +36,7 @@ root: true
 {% assign featured_papers = site.papers | where: "feature", true | sort: 'year' | reverse %}
 {% for paper in featured_papers limit: 3 %}
   <li class="line">
-    <a href="{{ paper.url }}">{{ paper.title }}</a><br>
+    <a>{{ paper.title }}</a><br>
     <span class="authors">{{ paper.authors | join: ", " }}</span><br>
     <time class="monospace" datetime="{{ paper.year }}">{{ paper.year }}</time>
     <span class="status {{ paper.status }}">{{ paper.status }}</span>

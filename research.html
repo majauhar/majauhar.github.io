@@ -12,7 +12,7 @@ permalink: /research/
     </svg>
   </div>
   <h1 class="h1">Research</h1>
-  <div class="desc">Exploring AI safety, multi-agent systems, and machine learning</div>
+  <div class="desc">Exploring Alignment, multi-agent systems, and fundamental problems in machine learning</div>
 </header>
 
 <main class="research-container">
@@ -22,12 +22,7 @@ permalink: /research/
 
   <section class="research-section">
     <h2>Current Research Interests</h2>
-    <ul class="interests-list">
-      <li>AI Alignment</li>
-      <li>Multi-Agent Systems</li>
-      <li>Long-horizon Task Evaluation</li>
-      <li>Capability and Safety Benchmarking</li>
-    </ul>
+    <p>AI Alignment • Multi-Agent Systems • Long horizon/context Task Evaluation • Generalisation</p>
   </section>
 
   <section class="research-section">
@@ -59,7 +54,7 @@ permalink: /research/
   {% assign sorted_papers = site.papers | sort: 'year' | reverse %}
   {% for paper in sorted_papers %}
   <div class="publication">
-    <h3><a href="{{ paper.url }}">{{ paper.title }}</a></h3>
+    <h3><a>{{ paper.title }}</a></h3>
     <div class="authors">{{ paper.authors | join: ", " }}</div>
     <div class="venue">
       {% if paper.venue %}{{ paper.venue }}, {% endif %}{{ paper.year }}
@@ -104,6 +99,55 @@ permalink: /research/
 </main>
 
 <style>
+  :root {
+    --backgroundColor: #fdfdfd;
+    --textColor: #303030;
+    --secondaryTextColor: #404040;
+    --mutedTextColor: #707070;
+    --subtleBackgroundColor: #f5f5f5;
+    --heartedBackgroundColor: #ffe2e2;
+    --selectionBackgroundColor: #ffc;
+    --linkColor: #2357cd;
+    --borderColor: #ccc;
+    --hrColor: #888;
+    --activeColor: #74d274;
+    --langBackgroundColor: #eeeeee;
+    --langShadowColor: transparent;
+    --logoColor: #cccccc;
+    --photoBackground: #f4f4f4;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --backgroundColor: #151615;
+      --textColor: #dbdfdf;
+      --secondaryTextColor: #bfc5c5;
+      --mutedTextColor: #b4b6b8;
+      --subtleBackgroundColor: #3a3b3b;
+      --heartedBackgroundColor: #652222;
+      --selectionBackgroundColor: #19446b;
+      --linkColor: #6eb8ff;
+      --borderColor: #414141;
+      --hrColor: #888;
+      --activeColor: #74d274;
+      --langBackgroundColor: #2c2c2c;
+      --langShadowColor: #0b0c0b33;
+      --logoColor: #555555;
+      --photoBackground: #1a1a1a;
+    }
+  }
+
+  body {
+    background: var(--backgroundColor);
+    color: var(--textColor);
+    line-height: 1.62em;
+    padding: 0 2.5em;
+    margin: 0;
+    font-size: 1.1rem;
+    word-wrap: break-word;
+    font-family: 'Anuphan', system-ui, sans-serif;
+  }
+  
   .research-container {
     max-width: 800px;
     margin: 0 auto;
@@ -113,8 +157,8 @@ permalink: /research/
   .research-intro {
     margin-bottom: 3rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid #eee;
-    color: #555;
+    border-bottom: 1px solid var(--borderColor);
+    color: var(--mutedTextColor);
     line-height: 1.6;
     font-size: 1.1rem;
   }
@@ -122,19 +166,21 @@ permalink: /research/
   .research-section {
     margin-bottom: 3rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid var(--borderColor);
   }
   
   .research-section h2 {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
-    color: #333;
+    color: var(--textColor);
+    font-weight: normal;
   }
   
   .research-section h3 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
-    color: #444;
+    color: var(--textColor);
+    font-weight: normal;
   }
   
   .interests-list {
@@ -144,19 +190,19 @@ permalink: /research/
   
   .interests-list li {
     padding: 0.5rem 0;
-    border-bottom: 1px solid #f5f5f5;
+    border-bottom: 1px solid var(--borderColor);
   }
   
   .interests-list li:last-child {
     border-bottom: none;
   }
   
-  .project, .education-item {
+  .project, .education-item, .publication {
     margin-bottom: 2rem;
     padding: 1.5rem;
-    background: #fafafa;
+    background: var(--subtleBackgroundColor);
     border-radius: 8px;
-    border-left: 4px solid #e0e0e0;
+    border-left: 4px solid var(--borderColor);
   }
   
   .project-meta {
@@ -174,117 +220,91 @@ permalink: /research/
   }
   
   .status.ongoing {
-    background: #e0f2ff;
-    color: #0066cc;
+    background: rgba(0, 102, 204, 0.15);
+    color: var(--linkColor);
   }
   
   .status.completed {
-    background: #e0ffe0;
-    color: #008800;
+    background: rgba(0, 136, 0, 0.15);
+    color: var(--activeColor);
+  }
+  
+  .status.published {
+    background: rgba(0, 136, 0, 0.15);
+    color: var(--activeColor);
+  }
+  
+  .status.accepted {
+    background: rgba(0, 102, 204, 0.15);
+    color: var(--linkColor);
+  }
+  
+  .status.submitted {
+    background: rgba(204, 102, 0, 0.15);
+    color: #cc6600;
+  }
+  
+  .status.preprint {
+    background: var(--langBackgroundColor);
+    color: var(--mutedTextColor);
   }
   
   .date {
-    color: #888;
+    color: var(--mutedTextColor);
     font-size: 0.9rem;
   }
   
   .institution {
     font-weight: 500;
-    color: #555;
+    color: var(--secondaryTextColor);
     margin-bottom: 0.5rem;
   }
   
   .project-link {
     display: inline-block;
     margin-top: 0.5rem;
-    color: #444;
+    color: var(--linkColor);
     font-weight: 500;
     text-decoration: none;
   }
   
   .project-link:hover {
-    color: #000;
+    color: var(--textColor);
   }
   
   .coming-soon {
     text-align: center;
     padding: 2rem;
-    background: #f9f9f9;
+    background: var(--langBackgroundColor);
     border-radius: 8px;
-    color: #666;
+    color: var(--mutedTextColor);
     font-style: italic;
-  }
-  
-  @media (max-width: 768px) {
-    .project-meta {
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-    
-    .project, .education-item {
-      padding: 1rem;
-    }
-  }
-  /* Add these styles to your existing CSS */
-  .publication {
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background: #fafafa;
-    border-radius: 8px;
   }
   
   .publication h3 {
     margin: 0 0 0.5rem 0;
-    color: #333;
+    color: var(--textColor);
   }
   
   .authors {
     font-style: italic;
-    color: #666;
+    color: var(--secondaryTextColor);
     margin-bottom: 0.5rem;
   }
   
   .venue {
     margin-bottom: 1rem;
-    color: #555;
-  }
-  
-  .status {
-    padding: 0.2rem 0.6rem;
-    border-radius: 12px;
-    font-size: 0.75rem;
-    font-weight: 500;
-    margin-left: 0.5rem;
-    text-transform: capitalize;
-  }
-  
-  .status.published {
-    background: #e0ffe0;
-    color: #008800;
-  }
-  
-  .status.accepted {
-    background: #e0f2ff;
-    color: #0066cc;
-  }
-  
-  .status.submitted {
-    background: #fff0e0;
-    color: #cc6600;
-  }
-  
-  .status.preprint {
-    background: #f0f0f0;
-    color: #666;
+    color: var(--secondaryTextColor);
   }
   
   .abstract {
     margin: 1rem 0;
     padding: 1rem;
-    background: white;
-    border-left: 3px solid #e0e0e0;
+    background: var(--backgroundColor);
+    border-left: 3px solid var(--borderColor);
     font-size: 0.95rem;
     line-height: 1.5;
+    color: var(--textColor);
   }
   
   .paper-links {
@@ -295,36 +315,51 @@ permalink: /research/
   
   .paper-link {
     padding: 0.3rem 0.8rem;
-    background: #e0e0e0;
+    background: var(--langBackgroundColor);
     border-radius: 4px;
     font-size: 0.8rem;
     text-decoration: none;
-    color: #555;
+    color: var(--mutedTextColor);
     transition: all 0.2s ease;
   }
   
   .paper-link:hover {
-    background: #d0d0d0;
-    color: #000;
+    background: var(--borderColor);
+    color: var(--textColor);
   }
   
   .paper-link.pdf {
-    background: #ffebee;
-    color: #c62828;
+    background: rgba(204, 102, 0, 0.15);
+    color: #cc6600;
   }
   
   .paper-link.arxiv {
-    background: #fff8e1;
-    color: #ff8f00;
+    background: var(--langBackgroundColor);
+    color: var(--mutedTextColor);
   }
   
   .paper-link.code {
-    background: #e8f5e9;
-    color: #2e7d32;
+    background: rgba(0, 136, 0, 0.15);
+    color: var(--activeColor);
   }
   
   .paper-link.website {
-    background: #e3f2fd;
-    color: #1565c0;
+    background: rgba(0, 102, 204, 0.15);
+    color: var(--linkColor);
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      padding: 0 1em;
+    }
+    
+    .project-meta {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .project, .education-item, .publication {
+      padding: 1rem;
+    }
   }
 </style>

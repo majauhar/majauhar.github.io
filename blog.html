@@ -48,6 +48,55 @@ permalink: /blog/
 </main>
 
 <style>
+  :root {
+    --backgroundColor: #fdfdfd;
+    --textColor: #303030;
+    --secondaryTextColor: #404040;
+    --mutedTextColor: #707070;
+    --subtleBackgroundColor: #f5f5f5;
+    --heartedBackgroundColor: #ffe2e2;
+    --selectionBackgroundColor: #ffc;
+    --linkColor: #2357cd;
+    --borderColor: #ccc;
+    --hrColor: #888;
+    --activeColor: #74d274;
+    --langBackgroundColor: #eeeeee;
+    --langShadowColor: transparent;
+    --logoColor: #cccccc;
+    --photoBackground: #f4f4f4;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --backgroundColor: #151615;
+      --textColor: #dbdfdf;
+      --secondaryTextColor: #bfc5c5;
+      --mutedTextColor: #b4b6b8;
+      --subtleBackgroundColor: #3a3b3b;
+      --heartedBackgroundColor: #652222;
+      --selectionBackgroundColor: #19446b;
+      --linkColor: #6eb8ff;
+      --borderColor: #414141;
+      --hrColor: #888;
+      --activeColor: #74d274;
+      --langBackgroundColor: #2c2c2c;
+      --langShadowColor: #0b0c0b33;
+      --logoColor: #555555;
+      --photoBackground: #1a1a1a;
+    }
+  }
+
+  body {
+    background: var(--backgroundColor);
+    color: var(--textColor);
+    line-height: 1.62em;
+    padding: 0 2.5em;
+    margin: 0;
+    font-size: 1.1rem;
+    word-wrap: break-word;
+    font-family: 'Anuphan', system-ui, sans-serif;
+  }
+  
   .blog-container {
     max-width: 800px;
     margin: 0 auto;
@@ -57,8 +106,8 @@ permalink: /blog/
   .blog-intro {
     margin-bottom: 3rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid #eee;
-    color: #555;
+    border-bottom: 1px solid var(--borderColor);
+    color: var(--mutedTextColor);
     line-height: 1.6;
     font-size: 1.1rem;
   }
@@ -71,7 +120,7 @@ permalink: /blog/
   
   .blog-post {
     padding-bottom: 2.5rem;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid var(--borderColor);
   }
   
   .post-meta {
@@ -84,8 +133,9 @@ permalink: /blog/
   }
   
   .post-date {
-    color: #888;
+    color: var(--mutedTextColor);
     font-size: 0.9rem;
+    font-family: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
   }
   
   .post-tags {
@@ -95,53 +145,59 @@ permalink: /blog/
   }
   
   .post-tag {
-    background: #f0f0f0;
+    background: var(--langBackgroundColor);
     padding: 0.3rem 0.6rem;
     border-radius: 4px;
     font-size: 0.8rem;
-    color: #555;
+    color: var(--mutedTextColor);
     transition: background 0.2s ease;
   }
   
   .post-tag:hover {
-    background: #e0e0e0;
+    background: var(--borderColor);
+    color: var(--textColor);
   }
   
   .post-title {
     font-size: 1.6rem;
     margin: 0 0 1rem 0;
     line-height: 1.3;
+    font-weight: normal;
   }
   
   .post-title a {
-    color: #333;
+    color: var(--textColor);
     text-decoration: none;
     transition: color 0.2s ease;
   }
   
   .post-title a:hover {
-    color: #000;
+    color: var(--linkColor);
   }
   
   .post-excerpt {
-    color: #555;
+    color: var(--secondaryTextColor);
     line-height: 1.6;
     margin-bottom: 1.25rem;
   }
   
   .read-more {
     display: inline-block;
-    color: #444;
+    color: var(--linkColor);
     font-weight: 500;
     text-decoration: none;
     transition: color 0.2s ease;
   }
   
   .read-more:hover {
-    color: #000;
+    color: var(--textColor);
   }
   
   @media (max-width: 768px) {
+    body {
+      padding: 0 1em;
+    }
+    
     .post-meta {
       flex-direction: column;
       align-items: flex-start;
