@@ -13,10 +13,10 @@ collections:
     output: true
   stories:
     output: true
-i18n:
-  en-US:
-    accessibility: Accessibility statement
-    source: Website Template Source
+  papers:
+    output: true
+    permalink: /papers/:name/
+
 include: [".well-known"]
 markdown: CommonMarkGhPages
 commonmark:

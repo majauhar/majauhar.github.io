@@ -1,0 +1,127 @@
+---
+layout: base
+---
+
+<header>
+  <div class="logo-container">
+    <a href="/research" aria-label="Back to Research" class="back-link">&leftarrow;</a>
+    <svg width="48" height="48" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <image href="/assets/header_grey.svg" width="32" height="32" />
+    </svg>
+  </div>
+  <h1 class="h1">{{ page.title }}</h1>
+  <div class="paper-meta">
+    <div class="authors">{{ page.authors | join: ", " }}</div>
+    <div class="venue-year">
+      {% if page.venue %}{{ page.venue }}, {% endif %}{{ page.year }}
+      <span class="status {{ page.status }}">{{ page.status }}</span>
+    </div>
+  </div>
+</header>
+
+<main class="paper-container">
+  {% if page.abstract %}
+  <section class="abstract">
+    <h2>Abstract</h2>
+    <p>{{ page.abstract }}</p>
+  </section>
+  {% endif %}
+  
+  {% if page.links %}
+  <section class="paper-links-section">
+    <h2>Links</h2>
+    <div class="paper-links">
+      {% for link in page.links %}
+      <a href="{{ link.url }}" class="paper-link {{ link.type | downcase }}" target="_blank">{{ link.type }}</a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+  
+  {% if page.citation %}
+  <section class="citation">
+    <h2>Citation</h2>
+    <pre><code>{{ page.citation }}</code></pre>
+  </section>
+  {% endif %}
+  
+  <section class="paper-content">
+    {{ content }}
+  </section>
+</main>
+
+<style>
+  .paper-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .paper-meta {
+    margin: 1rem 0 2rem 0;
+  }
+  
+  .authors {
+    font-style: italic;
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .venue-year {
+    color: #555;
+  }
+  
+  .status {
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-left: 0.5rem;
+    text-transform: capitalize;
+  }
+  
+  .status.published { background: #e0ffe0; color: #008800; }
+  .status.accepted { background: #e0f2ff; color: #0066cc; }
+  .status.submitted { background: #fff0e0; color: #cc6600; }
+  .status.preprint { background: #f0f0f0; color: #666; }
+  
+  .abstract, .paper-links-section, .citation, .paper-content {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .paper-links {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .paper-link {
+    padding: 0.5rem 1rem;
+    background: #e0e0e0;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #555;
+    transition: all 0.2s ease;
+  }
+  
+  .paper-link:hover {
+    background: #d0d0d0;
+    color: #000;
+  }
+  
+  .paper-link.pdf { background: #ffebee; color: #c62828; }
+  .paper-link.arxiv { background: #fff8e1; color: #ff8f00; }
+  .paper-link.code { background: #e8f5e9; color: #2e7d32; }
+  .paper-link.website { background: #e3f2fd; color: #1565c0; }
+  
+  .citation pre {
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-size: 0.9rem;
+  }
+</style>

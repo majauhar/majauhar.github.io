@@ -1,0 +1,325 @@
+---
+title: Research
+layout: minimal  # Use minimal layout instead of default
+permalink: /research/
+---
+
+<header>
+  <div class="logo-container">
+    <a href="/" aria-label="Home" class="back-link">&leftarrow;</a>
+    <svg width="48" height="48" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <image href="/assets/header_grey.svg" width="32" height="32" />
+    </svg>
+  </div>
+  <h1 class="h1">Research</h1>
+  <div class="desc">Exploring AI safety, multi-agent systems, and machine learning</div>
+</header>
+
+<main class="research-container">
+  <div class="research-intro">
+    <p>My research focuses on developing safe, aligned, and capable AI systems. I'm particularly interested in multi-agent systems, reinforcement learning, and AI safety techniques that ensure beneficial outcomes as AI capabilities advance.</p>
+  </div>
+
+  <section class="research-section">
+    <h2>Research Interests</h2>
+    <ul class="interests-list">
+      <li>AI Safety and Alignment</li>
+      <li>Multi-Agent Systems</li>
+      <li>Reinforcement Learning</li>
+      <li>Long-horizon Task Evaluation</li>
+      <li>Capability and Safety Benchmarking</li>
+    </ul>
+  </section>
+
+  <section class="research-section">
+    <h2>Current Projects</h2>
+    
+    <div class="project">
+      <h3>Evaluating AI Agent Capabilities on Long-horizon Tasks</h3>
+      <div class="project-meta">
+        <span class="status ongoing">Ongoing</span>
+        <span class="date">2024-Present</span>
+      </div>
+      <p>Developing evaluation frameworks to assess AI agent performance and safety alignment in complex, multi-step tasks that require planning and reasoning over extended time horizons.</p>
+    </div>
+    
+    <div class="project">
+      <h3>Multi-Agent Systems with CAMEL-AI</h3>
+      <div class="project-meta">
+        <span class="status ongoing">Ongoing</span>
+        <span class="date">2024-Present</span>
+      </div>
+      <p>Exploring communication and collaboration mechanisms in multi-agent environments using the CAMEL-AI framework, focusing on emergent behaviors and system robustness.</p>
+      <a href="https://github.com/camel-ai/camel" class="project-link">Project Repository →</a>
+    </div>
+  </section>
+
+<section class="research-section">
+  <h2>Publications & Preprints</h2>
+  
+  {% assign sorted_papers = site.papers | sort: 'year' | reverse %}
+  {% for paper in sorted_papers %}
+  <div class="publication">
+    <h3><a href="{{ paper.url }}">{{ paper.title }}</a></h3>
+    <div class="authors">{{ paper.authors | join: ", " }}</div>
+    <div class="venue">
+      {% if paper.venue %}{{ paper.venue }}, {% endif %}{{ paper.year }}
+      <span class="status {{ paper.status }}">{{ paper.status }}</span>
+    </div>
+    
+    {% if paper.abstract %}
+    <div class="abstract">
+      <p>{{ paper.abstract | truncate: 200 }}</p>
+    </div>
+    {% endif %}
+    
+    <div class="paper-links">
+      {% for link in paper.links %}
+      <a href="{{ link.url }}" class="paper-link {{ link.type | downcase }}">{{ link.type }}</a>
+      {% endfor %}
+      <!-- <a href="{{ paper.url }}" class="paper-link details">Details</a> -->
+      <!-- <a href="{{ site.baseurl }}{{ paper.url }}" class="paper-link details">Details</a> -->
+
+    </div>
+  </div>
+  {% else %}
+  <p class="coming-soon">Research publications coming soon. Check back later or <a href="/blog">read my blog</a> for latest updates.</p>
+  {% endfor %}
+</section>
+
+  <section class="research-section">
+    <h2>Education</h2>
+    <div class="education-item">
+      <h3>MVA Master's in Artificial Intelligence</h3>
+      <div class="institution">École Normale Supérieure Paris-Saclay</div>
+      <div class="date">2022-2023</div>
+      <p>Focus on machine learning, computer vision, and advanced AI methodologies.</p>
+    </div>
+  </section>
+</main>
+
+<style>
+  .research-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .research-intro {
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+    color: #555;
+    line-height: 1.6;
+    font-size: 1.1rem;
+  }
+  
+  .research-section {
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .research-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  .research-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #444;
+  }
+  
+  .interests-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .interests-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f5f5f5;
+  }
+  
+  .interests-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .project, .education-item {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #fafafa;
+    border-radius: 8px;
+    border-left: 4px solid #e0e0e0;
+  }
+  
+  .project-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .status {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  
+  .status.ongoing {
+    background: #e0f2ff;
+    color: #0066cc;
+  }
+  
+  .status.completed {
+    background: #e0ffe0;
+    color: #008800;
+  }
+  
+  .date {
+    color: #888;
+    font-size: 0.9rem;
+  }
+  
+  .institution {
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 0.5rem;
+  }
+  
+  .project-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #444;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  .project-link:hover {
+    color: #000;
+  }
+  
+  .coming-soon {
+    text-align: center;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    color: #666;
+    font-style: italic;
+  }
+  
+  @media (max-width: 768px) {
+    .project-meta {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .project, .education-item {
+      padding: 1rem;
+    }
+  }
+  /* Add these styles to your existing CSS */
+  .publication {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #fafafa;
+    border-radius: 8px;
+  }
+  
+  .publication h3 {
+    margin: 0 0 0.5rem 0;
+    color: #333;
+  }
+  
+  .authors {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+  
+  .venue {
+    margin-bottom: 1rem;
+    color: #555;
+  }
+  
+  .status {
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-left: 0.5rem;
+    text-transform: capitalize;
+  }
+  
+  .status.published {
+    background: #e0ffe0;
+    color: #008800;
+  }
+  
+  .status.accepted {
+    background: #e0f2ff;
+    color: #0066cc;
+  }
+  
+  .status.submitted {
+    background: #fff0e0;
+    color: #cc6600;
+  }
+  
+  .status.preprint {
+    background: #f0f0f0;
+    color: #666;
+  }
+  
+  .abstract {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: white;
+    border-left: 3px solid #e0e0e0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .paper-links {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .paper-link {
+    padding: 0.3rem 0.8rem;
+    background: #e0e0e0;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #555;
+    transition: all 0.2s ease;
+  }
+  
+  .paper-link:hover {
+    background: #d0d0d0;
+    color: #000;
+  }
+  
+  .paper-link.pdf {
+    background: #ffebee;
+    color: #c62828;
+  }
+  
+  .paper-link.arxiv {
+    background: #fff8e1;
+    color: #ff8f00;
+  }
+  
+  .paper-link.code {
+    background: #e8f5e9;
+    color: #2e7d32;
+  }
+  
+  .paper-link.website {
+    background: #e3f2fd;
+    color: #1565c0;
+  }
+</style>

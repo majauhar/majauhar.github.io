@@ -7,9 +7,6 @@ root: true
 <p>
   An aspiring ML researcher. Studied <a href="https://www.master-mva.com">AI</a> at Ecole normale superierure Paris-Saclay.
 </p>
-<!-- <p>
-  Lives in Taipei, Taiwan, and sometimes in Berlin. <span class="time" data-timestamp-text="It is currently {time} in Taipei."></span> Previous home bases include New York, London, and Birmingham, UK. 
-</p> -->
 
 <p>
   As of {{ site.recent_date | date: "%b %e" }}, I am evaluating capability and safety alignment performance of AI agents on long-horizon tasks. I am also learning multi-agent systems with <a href="https://github.com/camel-ai/camel">CAMEL-AI</a>.
@@ -18,62 +15,36 @@ root: true
 <nav aria-label="Profession">
   <a href="https://www.linkedin.com/in/majauhar/" rel="me" target="_blank">LinkedIn</a><hr class="inline-hr">
   <a href="https://github.com/majauhar" rel="me" target="_blank">GitHub</a><hr class="inline-hr">
-  <a href="https://drive.google.com/file/d/1celygb9FR9KOxB9wdmg9h5J44mh6SRP7/view?usp=sharing" rel="me" target="_blank">CV</a>
+  <a href="https://drive.google.com/file/d/1celygb9FR9KOxB9wdmg9h5J44mh6SRP7/view?usp=sharing" rel="me" target="_blank">CV</a><hr class="inline-hr">
+  <a href="https://scholar.google.com/citations?user=zQL4bMUAAAAJ&hl=en" rel="me" target="_blank">Scholar</a>
 </nav>
-
-<!-- <nav aria-label="Social">
-  <a href="https://github.com/majauhar" rel="me" target="_blank">GitHub</a><hr class="inline-hr">
-</nav> -->
 
 <div class="lang">
   <a href="/" srclang="en-US" aria-current="true">English</a>
 </div>
 
-<!-- <hr class="hr"> -->
+<hr class="hr">
 
-<!-- <h2 class="normal-heading">Stories</h2> <a href="/stories.xml" class="styled-link">RSS</a> <a href="https://github.com/dddddddddzzzz/OpenStories" class="styled-link">What are these?</a> -->
-
-<!-- {% include stories.html lang="en" %} -->
-
-<!-- <hr class="hr"> -->
-
-<!-- <h2 class="normal-heading">Photos</h2><a href="/photos" class="styled-link">All photos</a> <a href="/photos.xml" class="styled-link">RSS</a> -->
-<!-- <div class="photos">
-{% assign photos = site.data.photos | reverse | slice: 0, 10 %}
-{% for photo in photos %}
-  {% capture image_url %}{% for url in photo.variants %}{% if url contains "/thumbnail" %}{{ url }}{% endif %}{% endfor %}{% endcapture %}
-  <a href="/photos#P{{ photo.id }}" class="image-link">
-    <img src="{{ image_url }}" height="200" alt="{{ photo.meta.alt }}" loading="lazy" style="aspect-ratio: {{ photo.meta.ratio }};">
-  </a>
+<h2 class="normal-heading">Featured Research</h2>
+<a href="/research" class="styled-link">View all research</a>
+<ul aria-label="research" class="terminal">
+{% assign featured_papers = site.papers | where: "feature", true | sort: 'year' | reverse %}
+{% for paper in featured_papers limit: 3 %}
+  <li class="line">
+    <a href="{{ paper.url }}">{{ paper.title }}</a><br>
+    <span class="authors">{{ paper.authors | join: ", " }}</span><br>
+    <time class="monospace" datetime="{{ paper.year }}">{{ paper.year }}</time>
+    <span class="status {{ paper.status }}">{{ paper.status }}</span>
+  </li>
+{% else %}
+  <li class="line">Research publications coming soon. <a href="/research">Learn more about my work</a>.</li>
 {% endfor %}
-</div> -->
-
-<!-- <h2 class="normal-heading">Film photos</h2><a href="/film" class="styled-link">All film photos</a> <a href="/film.xml" class="styled-link">RSS</a>
-<div class="photos">
-{% assign photos = site.data.film | reverse | slice: 0, 10 %}
-{% for photo in photos %}
-  {% capture image_url %}{% for url in photo.variants %}{% if url contains "/thumbnail" %}{{ url }}{% endif %}{% endfor %}{% endcapture %}
-  <a href="/film#P{{ photo.id}}" class="image-link">
-    <img src="{{ image_url }}" height="200" alt="{{ photo.meta.alt }}" loading="lazy" style="aspect-ratio: {{ photo.meta.ratio }};">
-  </a>
-{% endfor %}
-</div> -->
-
-<!-- <hr class="hr">
-
-{% assign note = site.notes | last %}
-<h2 class="normal-heading">Notes</h2><a href="/notes" class="styled-link">Recent notes</a> <a href="/notes.xml" class="styled-link">RSS</a>
-<div class="note">
-  <time class="general-actions monospace">
-    {{ note.date | date: "%b %e, %Y" }}
-  </time>
-  <div class="note-content" lang="{{ note.lang }}">{{ note.content | markdownify }}</div>
-  <div class="note-tags">{% for tag in note.tags %}<span class="note-tag" data-tag="{{ tag }}">{{ tag }}</span>{% endfor %}</div>
-</div> -->
+</ul>
 
 <hr class="hr">
 
 <h2 class="normal-heading">Recent posts</h2>
+<a href="/blog" class="styled-link">View all blog posts</a>
 <ul aria-label="posts" class="terminal">
 {% assign posts = site.posts | where: "feature", 1 %}
 {% for post in posts %}
@@ -81,3 +52,37 @@ root: true
     <time class="monospace" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %e, %Y" }}</time></li>
 {% endfor %}
 </ul>
+
+<style>
+  .authors {
+    font-style: italic;
+    color: #666;
+    font-size: 0.9rem;
+    display: block;
+    margin: 0.25rem 0;
+  }
+  
+  .status {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-left: 0.5rem;
+    text-transform: capitalize;
+  }
+  
+  .status.published { background: #e0ffe0; color: #008800; }
+  .status.accepted { background: #e0f2ff; color: #0066cc; }
+  .status.submitted { background: #fff0e0; color: #cc6600; }
+  .status.preprint { background: #f0f0f0; color: #666; }
+  
+  @media (max-width: 768px) {
+    .status {
+      display: block;
+      margin-left: 0;
+      margin-top: 0.25rem;
+      width: fit-content;
+    }
+  }
+</style>
