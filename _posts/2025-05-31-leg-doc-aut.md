@@ -4,9 +4,6 @@ title: Multi-Agent Systems for Legal Document Automation using CAMEL AI Framewor
 date: 2025-05-31 18:29:50
 feature: 1
 ---
-
-### A primer on AI agents
-
 Access to tools such as web search has enabled chatbots like ChatGPT access latest and updated information, significantly improving their usefulness. LLM or similarly large multi-modal models, when given separate tools to interact with its environment (*aka agency*) as per its own reasoning, are often termed as AI agents. 
 
 More formally,

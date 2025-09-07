@@ -1,6 +1,11 @@
 ---
 title: "Benchmarking Long-Horizon Reasoning in Large Language Models"
-author: "Mohammad A. Jauhar"
+authors:
+  - A Verma*
+  - AV Subramanyam*
+  - MA Jauhar*
+  - D Gera
+  - RR Shah
 year: 2023
 status: "published"
 venue: "International Conference on Machine Learning (ICML)"

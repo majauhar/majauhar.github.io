@@ -5,10 +5,14 @@ date: 2025-08-24 18:29:50
 feature: 1
 ---
 
+In his famous essay *More Is Different* (1972), physicist *Philip W. Anderson* argued that complexity and scale give rise to entirely new properties that cannot be extrapolated from the behavior of individual components [Anderson, 1972]. 
+
 > ***The sum of the parts is both more than, and different from, the parts themselves.***
 > 
 
-In his famous essay *More Is Different* (1972), physicist *Philip W. Anderson* argued that complexity and scale give rise to entirely new properties that cannot be extrapolated from the behavior of individual components [Anderson, 1972]. This perspective is reflected across disciplines. Is chemistry just applied physics? Is molecular biology merely applied single-cell biology? Is computer science or machine learning simply applied mathematics? Clearly, they are not. While many fields build upon one another, Anderson emphasized that at each new stage, new laws, concepts, and generalizations become necessary.
+This perspective is reflected across disciplines. Is chemistry just applied physics? Is molecular biology merely applied single-cell biology? Is computer science or machine learning simply applied mathematics? Clearly, they are not. While many fields build upon one another, Anderson emphasized that at each new stage, new laws, concepts, and generalizations become necessary.
+
+## The LLM Perspective
 
 Language models have evolved rapidly in recent years. Early approaches relied on relatively simple n-gram statistical models, followed by recurrent neural networks (RNNs). The advent of transformer architectures (Vaswani et al., 2017) marked a turning point. Transformers offered two key advantages: they were highly parallelizable, allowing effective use of hardware accelerators and faster training, and they incorporated the attention mechanism, enabling much better modeling of long-range dependencies compared with RNNs or CNNs. These breakthroughs made it feasible to train models on vastly larger datasets and with more complex architectures.
 
@@ -18,7 +22,8 @@ Scaling in terms of model size and pre-training data has been studied extensivel
 
 This raises a deeper question: how should we measure “intelligence”? When comparing across the animal kingdom, intelligence itself remains difficult to quantify. Is it continuous, or does it manifest as step changes? I cannot claim to know the answer. But I believe grappling with these questions will help us develop better evaluation metrics for LLMs and clarify whether emergent capabilities truly exist.
 
-Beyond LLMs themselves, AI agents built around LLM cores are now a hot area of research. By integrating tool-use, memory, and external APIs, they address many limitations of standalone models. Indeed, most popular chat interfaces already incorporate some degree of tool-calling. **Multi-agent AI systems**, in particular, are touted as a promising next step. Classical studies of multi-agent systems have shown the emergence of complex behaviors: coordination, negotiation, even new communication protocols (Shoham & Leyton-Brown, 2009). A while ago, there was a viral video where the demonstrators claimed that AI agents switched to a more efficient communication protocol (which they dubbed as *Gibberlink*) once they realised that they were talking to an AI. With powerful LLM cores, it is plausible that new forms of collective intelligence will arise behaviors distinct from what single LLMs display.
+## Beyond LLMs: Agents
+AI agents built around LLM cores are now a hot area of research. By integrating tool-use, memory, and external APIs, they address many limitations of standalone models. Indeed, most popular chat interfaces already incorporate some degree of tool-calling. **Multi-agent AI systems**, in particular, are touted as a promising next step. Classical studies of multi-agent systems have shown the emergence of complex behaviors: coordination, negotiation, even new communication protocols (Shoham & Leyton-Brown, 2009). A while ago, there was a viral video where the demonstrators claimed that AI agents switched to a more efficient communication protocol (which they dubbed as *Gibberlink*) once they realised that they were talking to an AI. With powerful LLM cores, it is plausible that new forms of collective intelligence will arise behaviors distinct from what single LLMs display.
 
 How this will play out remains an open question. Could we witness a genuine “phase transition” in AI systems when multiple agents interact? Will the sum of the parts truly be more than, and different from, the parts themselves? I have been thinking about this for quite some time and trying to find the answers. But for now, I could say that time will tell.
 

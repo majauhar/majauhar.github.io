@@ -7,7 +7,7 @@ authors:
 venue: "Conference on Neural Information Processing Systems (NeurIPS)"
 year: 2024
 status: "preprint" # preprint, submitted, accepted, published
-feature: true
+feature: false
 tags:
   - AI Safety
   - Multi-Agent Systems
