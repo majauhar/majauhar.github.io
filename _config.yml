@@ -2,7 +2,7 @@ title:            Mohammad A. Jauhar
 description:      Notepad
 url:              https://majauhar.github.io/
 permalink:        /posts/:title
-timezone:         Asia/Kolkata
+timezone:         Europe/Paris
 sass:
   sass_dir: assets
   style: :compressed
@@ -22,7 +22,7 @@ markdown: CommonMarkGhPages
 commonmark:
   options: ["UNSAFE", "HARDBREAKS"]
   extensions: ["strikethrough", "autolink", "table"]
-recent_date: "2025/08/30"
+recent_date: "2026/01/16"
 
 # Additional support for MathJax
 enable_math: true
