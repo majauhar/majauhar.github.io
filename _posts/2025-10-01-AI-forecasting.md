@@ -44,25 +44,46 @@ Under the scaling view, specific models like Bio Anchors and the Direct Approach
 
 These mechanism-based models rely on assumptions about compute growth, efficiency, and the sufficiency of current architectures. For example, they assume no major algorithmic breakthroughs beyond scaling, and that one can build brain-scale models in single runs. Some people claim that these assumptions may be optimistic or incomplete, but proponents argue they provide concrete forecasts rooted in measurable trends.
 
+Let's look at the compilation of predictions in the following table. 
+
+|Source (year)                                |Type                                     |Sample / N                                  |Definition / Question                                                      |Predicted Timeline                                     |
+|---------------------------------------------|-----------------------------------------|--------------------------------------------|---------------------------------------------------------------------------|-------------------------------------------------------|
+|AI Impacts – Expert Survey (2023)            |Expert survey                            |2,778 researchers                           |HLMI: unaided machines can accomplish every task better/cheaper than humans|10% by 2027; 50% by 2047                               |
+|Metaculus (Dec 2024 aggregate)               |Prediction-market / community aggregation|~1000+ forecasts                            |Metaculus AGI definition (community aggregation)                           |25% by 2027; 50% by 2031                               |
+|Sentience Institute – AIMS (2023)            |Public opinion (US)                      |1,169 adults                                |Public perceptions of AGI, HLAI, ASI                                       |Median: AGI ~ 2025; HLAI ~ 2028; ASI ~ 2028            |
+|Public First (UK poll, 2023)                 |Public opinion (UK)                      |Nat. poll                                   |Public expectations of AGI                                                 |Median arrival: 2030–2039                              |
+|Existential Risk Persuasion Tournament (2022)|Superforecasters                         |32, 28, 27 (for 2030, 2050, and 2100, resp.)|Tournament AGI-related questions                                           |Superforecasters: 1% by 2030; 21% by 2050; 75% by 2100 |
+|Existential Risk Persuasion Tournament (2022)|Experts                                  |5                                           |Tournament AGI-related questions                                           |Experts: 9% by 2030; 46% by 2050; 87% by 2100          |
+|Biological Anchors – Ajeya Cotra (2020)      |Mechanism-based                          |N/A (model)                                 |Brain, genome, child learning, evolution compute anchors                   |10% by 2031; 50% by 2052; 78% by 2100                  |
+|Direct Approach – Epoch AI (2023)            |Mechanism-based                          |N/A (model)                                 |Extrapolated scaling laws (loss extrapolation)                             |10% by 2025; 50% by 2033                               |
+|Yoshua Bengio (2023–2025)                    |Individual expert                        |—                                           |HLAI (Public remarks)                                                      |Estimated: HLAI plausible in 5–20 years                |
+|Geoffrey Hinton (2023–2025)                  |Individual expert                        |—                                           |AGI (Public remarks)                                                       |Estimated: HLAI within 5–20 years                      |
+|Sam Altman (2023–2025)                       |Industry leader (OpenAI CEO)             |—                                           |AGI (Public remarks)                                                       |AGI possible in 4–5 years (2027–2028)                  |
+|Dario Amodei (2024–2025)                     |Industry leader (Anthropic CEO)          |—                                           |HLAI (Public remarks)                                                      |AI could surpass almost all humans in 2–3 years        |
+|Jensen Huang (2024)                          |Industry leader (NVIDIA CEO)             |—                                           |‘Fairly competitive’ with humans (Public remarks)                          |AI could pass many human tests in ~5 years             |
+|Eliezer Yudkowsky (2023)                     |AI safety and x-risk expert              |—                                           |AGI                                                                        |Suggests 3-16 years as plausible, 50 as implausible    |
+|Rob Bensinger (2023)                         |AI safety and x-risk expert              |—                                           |‘STEM-level’ AGI	                                                          |Suggests 5-15 years as plausible, 50-150 as implausible|
+
+
 ## Limitations in Al Forecasting
 
 Predicting the arrival of advanced Al is a notoriously difficult endeavour. The methodologies employed are subject to several well-documented challenges and cognitive biases that can significantly impact their reliability. Understanding these limitations is crucial for interpreting any Al timeline forecast.
 
-## Framing Effects
+### Framing Effects
 
 Like many other expert elicitations, surveys about Al timelines and risks exhibit the "framing effects" [18] where the specific wording and framing of a question can drastically alter responses. This reduces the reliability and comparability of such surveys. For example, in a survey [19] of Al researchers, the framing of the key milestone as the arrival of "High-level machine intelligence (HLMI)" versus "full automation of labour (FAOL)" resulted in a median forecast difference of nearly 60 years. HLMI is an abstract, technical concept, whereas FAOL is a more concrete socio-economic outcome that participants may find easier to reason about, leading to vastly different anchors for their predictions. This demonstrates how subtle changes in terminology can access different cognitive frameworks and lead to divergent forecasts, even from the same group of experts.
 
-## Information Cascades
+### Information Cascades
 
 Forecasts and opinions about Al do not form in a vacuum. The predictions from one group can influence another in a feedback loop, a phenomenon known as an "information cascade." For instance, a published survey of Al experts may anchor the predictions of a forecasting community like Metaculus. The resulting trend on Metaculus might then influence public opinion or the beliefs of policymakers, which in turn could affect funding and research directions. Such cascades suggest that different sources of predictions are often not statistically independent. This creates a risk of correlated errors, where a single flawed assumption or initial estimate can become widely propagated, creating a false sense of consensus or a "herding effect" [20]. It results in anchoring the community's expectations to a potentially narrow set of initial assumptions that are then reinforced rather than critically examined. Disentangling these influences and appropriately weighting different predictions is not straightforward and warrants significant caution.
 
-## Emulating Biology and "Bio-Anchors"
+### Emulating Biology and "Bio-Anchors"
 
 History has shown that technological progress does not always successfully emulate biology. We built airplanes with fixed wings and propellers, not by mechanically replicating the flapping wings of a bird. This principle, often referred to as Moravec's paradox, suggests that the hard problems for humans are easy for Al, and vice versa. Hence, assuming that the path to Artificial General Intelligence (AGI) must involve reverse-engineering or closely mimicking the human brain may be a flawed premise. This approach to forecasting, which uses the human brain as a reference point (a "bio-anchor"), faces two major hurdles. 
 
 First, similar to the aviation example, the most efficient engineering solution is often fundamentally different from the biological one. The path to machine intelligence may follow principles entirely alien to neurobiology. Second, our understanding of how the brain produces intelligence, consciousness, and general reasoning is still remarkably incomplete. This makes any prediction grounded in computational equivalents of the brain's processing power or architecture highly speculative. As a result, predictions grounded in "biological anchors," may be less robust than they appear. Yudkowsky's critique highlights that biological anchors implicitly assume human-like efficiency in cognition, despite the possibility that machine intelligence may develop along radically different trajectories.
 
-## Scaling Laws and Discontinuous Gains
+### Scaling Laws and Discontinuous Gains
 
 Many contemporary, mechanism-based forecasts rely heavily on the "scaling hypothesis." This is the empirically observed phenomenon [21] that as we increase the compute, data, and parameters of certain Al models, their performance improves in a predictable, continuous manner. These forecasts often extrapolate these smooth trends into the future.
 
