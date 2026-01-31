@@ -5,7 +5,7 @@ date: 2025-10-01 18:29:50
 feature: 1
 ---
 
-The timing of transformative Al (TAI), often synonymised with terms including artificial general intelligence (AGI), artificial super intelligence (ASI), human-level machine intelligence (HLMI), full automation of labour (FAOL), etc., is a central debate in Al safety and policy. Predicting the future is hard. It is made more complicated by ambiguous terms, scopes, and definitions. For example, what counts as "transformative" can range from achieving in-lab human-level intelligence to widespread economic and societal impact. An analogy is the Internet: ARPANET began in 1969, TCP/IP was invented in 1974 (and standardized by 1983), and the World Wide Web appeared in 1990. However, the Internet's true social impact (email, web browsers, e-commerce, etc.) only emerged in the mid-to-late 1990s. Similarly, Al might reach key technical milestones years before their effects are truly felt in society.
+The timing of transformative Al (TAI)[^1], is a central debate in Al safety and policy. Predicting the future is hard. It is made more complicated by ambiguous terms, scopes, and definitions. For example, what counts as "transformative" can range from achieving in-lab human-level intelligence to widespread economic and societal impact. An analogy is the Internet: ARPANET began in 1969, TCP/IP was invented in 1974 (and standardized by 1983), and the World Wide Web appeared in 1990. However, the Internet's true social impact (email, web browsers, e-commerce, etc.) only emerged in the mid-to-late 1990s. Similarly, Al might reach key technical milestones years before their effects are truly felt in society.
 
 The terms used for advanced Al vary (AGI, ASI, superintelligence, "full automation of labor," HLMI/"high-level machine intelligence," etc.), and small differences in wording can lead to significant differences in timeline estimates. For instance, Al Impacts defines HLMI as when
 "unaided machines can accomplish every task better and more cheaply than human workers"[1]. This is essentially a human-level Al benchmark. Yet, even among experts, the predicted date for HLMI often moves earlier as Al advances (the 2023 Al Impacts survey placed a 50% chance of HLMI by 2047, earlier than previous surveys). As with the Internet, technical capability often precedes widespread transformation. One might call Al "transformative" when it actually causes major societal shifts, not just when a lab prototype exists. Nonetheless, forecasts typically focus on milestones like AGI/HLMI as proxies for potential impact.
@@ -134,3 +134,5 @@ However, the assumption that capabilities will continue to improve smoothly is n
 [21] https://arxiv.org/abs/2001.08361
 
 [22] https://arxiv.org/abs/2206.07682
+
+[^1]: Often synonymised with terms including artificial general intelligence (AGI), artificial super intelligence (ASI), human-level machine intelligence (HLMI), full automation of labour (FAOL), etc.

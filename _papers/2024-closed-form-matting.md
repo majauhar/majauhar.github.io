@@ -14,7 +14,7 @@ tags:
   - Optimization
 links:
   - type: PDF
-    url: https://ieeexplore.ieee.org/document/10220009
+    url: https://www.ipol.im/pub/pre/532/
   - type: Demo
     url: https://www.ipol.im/pub/pre/532/
   - type: Code

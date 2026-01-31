@@ -36,7 +36,15 @@ root: true
 {% assign featured_papers = site.papers | where: "feature", true | sort: 'year' | reverse %}
 {% for paper in featured_papers limit: 3 %}
   <li class="line">
-    <a>{{ paper.title }}</a><br>
+    {% assign pdf_link = paper.links | where: "type", "PDF" | first %}
+    {% assign website_link = paper.links | where: "type", "Website" | first %}
+    {% assign demo_link = paper.links | where: "type", "Demo" | first %}
+    {% assign link_url = pdf_link.url | default: website_link.url | default: demo_link.url %}
+    {% if link_url %}
+      <a href="{{ link_url }}" target="_blank">{{ paper.title }}</a><br>
+    {% else %}
+      <a>{{ paper.title }}</a><br>
+    {% endif %}
     <span class="authors">{{ paper.authors | join: ", " }}</span><br>
     <time class="monospace" datetime="{{ paper.year }}">{{ paper.year }}</time>
     <span class="status {{ paper.status }}">{{ paper.status }}</span>

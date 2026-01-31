@@ -18,10 +18,7 @@ collections:
     permalink: /papers/:name/
 
 include: [".well-known"]
-markdown: CommonMarkGhPages
-commonmark:
-  options: ["UNSAFE", "HARDBREAKS"]
-  extensions: ["strikethrough", "autolink", "table"]
+markdown: kramdown
 recent_date: "2026/01/16"
 
 # Additional support for MathJax

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "More is Different: The Promise of Multi-Agent AI Systems"
+subtitle: "Thinking about Complexity"
 date: 2025-08-24 18:29:50
 feature: 1
 ---

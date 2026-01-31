@@ -17,34 +17,45 @@ layout: base
   <h1 class="h1">
     <span lang="{{lang}}">{{ page.title }}</span>
   </h1>
+  {% if page.subtitle %}
+  <div class="subtitle">{{ page.subtitle }}</div>
+  {% endif %}
   {% if page.collection == "posts" %}<time class="monospace" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %e, %Y" }}</time>{% endif %}
   {% if page.collection == "notes" or page.collection == "stories" %}<time class="monospace" datetime="{{ page.date }}">{{ page.date | date: "%Y/%m/%d %H:%M" }}</time>{% endif %}
   <div class="desc">{{ page.header_content }}</div>
 </header>
-<main>
+<main{% if page.collection == "posts" or page.collection == "pages" %} class="post-main"{% endif %}>
   {% capture content_and_then_some do %}
     {{ content }}
   {% endcapture %}
 
   {% if page.collection == "posts" or page.collection == "pages" %}
-    <article>
-      {{ content_and_then_some }}
-    </article>
+    <div class="distill-layout">
+      <div class="left-pane" id="left-pane">
+        <div class="pane-placeholder">Hover over text in the article to see a preview here.</div>
+      </div>
+      <div class="center-pane">
+        <article>
+          {{ content_and_then_some }}
+        </article>        {% if page.feature == 1 or page.open_heart %}
+          <hr class="hr">
+          <div class="smol">
+            <div class="monospace">
+              <div id="like-prompt">Like this {% if page.collection == "posts" %}post{% elsif page.collection == "notes" %}note{% else %}page{% endif %}? let me know!</div>
+              &gt;<open-heart class="text-open-heart" href="https://openheart.siddmohamed19.workers.dev/?id={{ page.url }}" emoji="❤️" aria-labelledby="like-prompt">
+                <span class="on">Liked.<br>(Thanks!)</span><span class="off">Sure. <kbd>⏎</kbd></span>
+              </open-heart>
+            </div>
+          </div>
+        {% endif %}      </div>
+      <div class="right-pane" id="right-pane">
+        <!-- Right pane for footnotes on hover -->
+      </div>
+    </div>
   {% elsif page.collection == "notes" %}
     <div class="note-content" lang="{{ page.lang }}">{{ content_and_then_some }}</div>
     <div class="note-tags">{% for tag in page.tags %}<span class="note-tag" data-tag="{{ tag }}">{{ tag }}</span>{% endfor %}</div>
   {% else %}
     {{ content_and_then_some }}
-  {% endif %}
-  {% if page.feature == 1 or page.open_heart %}
-    <hr class="hr">
-    <div class="smol">
-      <div class="monospace">
-        <div id="like-prompt">Like this {% if page.collection == "posts" %}post{% elsif page.collection == "notes" %}note{% else %}page{% endif %}? let me know!</div>
-        &gt;<open-heart class="text-open-heart" href="https://openheart.siddmohamed19.workers.dev/?id={{ page.url }}" emoji="❤️" aria-labelledby="like-prompt">
-          <span class="on">Liked.<br>(Thanks!)</span><span class="off">Sure. <kbd>⏎</kbd></span>
-        </open-heart>
-      </div>
-    </div>
   {% endif %}
 </main>
