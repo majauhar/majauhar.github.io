@@ -10,9 +10,11 @@ if ('share' in navigator) {
 
 // Distill-style layout enhancements
 document.addEventListener('DOMContentLoaded', function() {
-  // Hide the footnotes list from the bottom of the page
+  console.log('window.innerWidth:', window.innerWidth);
+  // Hide the footnotes list from the bottom of the page on desktop only
   const footnotesDiv = document.querySelector('.footnotes');
-  if (footnotesDiv) {
+  console.log('footnotesDiv:', footnotesDiv);
+  if (footnotesDiv && window.innerWidth > 768) {
     footnotesDiv.style.display = 'none';
   }
   // Handle footnotes visibility based on scroll position

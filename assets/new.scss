@@ -1009,6 +1009,12 @@ label:has(input:not(:checked)) ~ label:has(input:not(:checked)) ~ label:has(inpu
   .right-pane {
     position: static;
     order: -1;
+    height: auto;
+    display: none; /* Hide panes on mobile */
+  }
+
+  .footnotes {
+    display: block !important; /* Show footnotes on mobile */
   }
 }
 

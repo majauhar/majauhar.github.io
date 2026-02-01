@@ -32,7 +32,7 @@ layout: base
   {% if page.collection == "posts" or page.collection == "pages" %}
     <div class="distill-layout">
       <div class="left-pane" id="left-pane">
-        <div class="pane-placeholder">Hover over text in the article to see a preview here.</div>
+        <!-- <div class="pane-placeholder">Hover over text in the article to see a preview here.</div> -->
       </div>
       <div class="center-pane">
         <article>
@@ -46,6 +46,26 @@ layout: base
                 <span class="on">Liked.<br>(Thanks!)</span><span class="off">Sure. <kbd>⏎</kbd></span>
               </open-heart>
             </div>
+          </div>
+        {% endif %}
+        {% if page.collection == "posts" %}
+          <hr class="hr">
+          <div class="giscus-comments">
+            <script src="https://giscus.app/client.js"
+                    data-repo="majauhar/majauhar.github.io"
+                    data-repo-id="R_kgDOOZZkmA"
+                    data-category="General"
+                    data-category-id="DIC_kwDOOZZkmM4C1uLp"
+                    data-mapping="pathname"
+                    data-strict="0"
+                    data-reactions-enabled="0"
+                    data-emit-metadata="0"
+                    data-input-position="bottom"
+                    data-theme="preferred_color_scheme"
+                    data-lang="en"
+                    crossorigin="anonymous"
+                    async>
+            </script>
           </div>
         {% endif %}      </div>
       <div class="right-pane" id="right-pane">
