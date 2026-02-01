@@ -4,17 +4,39 @@ Code for majauhar.github.io
 
 ## Technology
 
-- HTML, CSS, Anti-JavaScript JavaScript
+- HTML, CSS, SCSS, JavaScript
 - [RSS](https://en.wikipedia.org/wiki/RSS)
 - [Jekyll on GitHub Pages](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll)
-- [OpenStories](https://github.com/dddddddddzzzz/OpenStories), [`<open-stories>`](https://github.com/dddddddddzzzz/open-stories-element)
-- [OpenHeart](https://github.com/dddddddddzzzz/OpenHeart), [`<open-heart>`](https://github.com/dddddddddzzzz/open-heart-element)
+- [Giscus](https://giscus.app/) for comments
+- [MathJax](https://www.mathjax.org/) for mathematical notation
+- [Kramdown](https://kramdown.gettalent.com/) for Markdown processing
+- [OpenHeart](https://github.com/dddddddddzzzz/OpenHeart), [`<open-heart>`](https://github.com/dddddddddzzzz/open-heart-element) for like buttons
+- Three-column Distill.pub-style layout with interactive table of contents and contextual footnotes
 
 ## Development
 
-Requires a Ruby enviroment.
+### Using Docker (Recommended)
 
+Requires Docker and Docker Compose.
+
+```bash
+# Start the development server
+docker-compose up
+
+# Or build and start
+docker-compose up --build
+
+# Stop the server
+docker-compose down
 ```
+
+The site will be available at `http://localhost:4000` with live reloading enabled.
+
+### Using Ruby Environment
+
+Requires a Ruby environment.
+
+```bash
 $ ./start
 ```
 
