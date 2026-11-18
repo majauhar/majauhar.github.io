@@ -19,7 +19,7 @@ collections:
 
 include: [".well-known"]
 markdown: kramdown
-recent_date: "2026/01/16"
+recent_date: "2026/11/18"
 
 # Additional support for MathJax
 enable_math: true
